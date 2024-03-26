@@ -12,5 +12,5 @@ go build quadchecker.go
 
 mkdir dev 
 
-mv quad*.go dev
+mv dev/quad*.go .
 
