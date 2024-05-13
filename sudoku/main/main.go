@@ -33,8 +33,6 @@ func main() {
 			}
 		}
 	}
-	piscine.Print_sudoku(tr)
-	fmt.Println("__")
 	if !piscine.Solve(tr, 0, 0) {
 		fmt.Println("Error")
 		return

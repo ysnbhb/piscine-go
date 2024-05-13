@@ -30,7 +30,9 @@ func Chec(board [][]int, row, col, num int) bool {
 func Print_sudoku(bo [][]int) {
 	for i := 0; i < 9; i++ {
 		for j := 0; j < 9; j++ {
-			fmt.Print(bo[i][j], " ")
+			if j != 8 {
+				fmt.Print(bo[i][j], " ")
+			}
 		}
 		fmt.Println()
 	}
@@ -79,23 +81,4 @@ func Tonumbre(bo string) []int {
 		}
 	}
 	return toint
-}
-
-func SplitWithSpace(t string) []string {
-	tr := []string{}
-	o := ""
-	for i := 0; i < len(t); i++ {
-		if t[i] == ' ' {
-			if o != "" {
-				tr = append(tr, o)
-			}
-			o = ""
-		} else {
-			o += string(t[i])
-		}
-	}
-	if o != "" {
-		tr = append(tr, o)
-	}
-	return tr
 }
